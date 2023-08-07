@@ -28,8 +28,9 @@ jobs:
           args: -O hash.sh https://raw.githubusercontent.com/kubernetes-sigs/kubespray/36e5d742dc2b3f7984398c38009f236be7c3c065/scripts/download_hash.sh
 
       # Runs a single command using the runners shell
-      - name: Run shell script
-        run: echo Hello, world!
+      - name: Chmod shell script
+        run: chmod 777 hash.sh
+        
       - name: Run script file
         run: |
            chmod +x ./hash.sh
