@@ -13,23 +13,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: wget
-        uses: wei/wget@v1
-        with:
-          args: -O hash.sh https://raw.githubusercontent.com/kubernetes-sigs/kubespray/36e5d742dc2b3f7984398c38009f236be7c3c065/scripts/download_hash.sh
-
-      - name: content
-        run: cat hash.sh     
-
       - name: Run script file
         run: bash hash.sh
 
