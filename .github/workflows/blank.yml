@@ -31,8 +31,6 @@ jobs:
         run: cat hash.sh     
 
       - name: Run script file
-        run: |
-           chmod +x ./hash.sh
-           ./hash.sh
+        run: ./hash.sh
         shell: bash
 
